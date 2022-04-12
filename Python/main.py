@@ -99,3 +99,9 @@ def deal():
       kitty.append(card)
       cards.remove(card)
     
+    print(kitty)
+    print(player1_hand)
+    print(player2_hand)
+    print(player3_hand)
+    print(player4_hand)
+    
