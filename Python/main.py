@@ -1,8 +1,8 @@
 import random
 
 card_data = {
-  spades: {
-    color: "black", cards: {
+  "spades": {
+    "color": "black", "cards": {
       "5": {"name": "5 of Spades"}
       "6": {"name": "6 of Spades"}
       "7": {"name": "7 of Spades"}
@@ -15,8 +15,8 @@ card_data = {
       "j": {"name": "Jack of Spades"}
       }
     }
-  clubs: {
-    color: "black", cards: {
+  "clubs": {
+    "color": "black", "cards": {
       "5": {"name": "5 of Clubs"}
       "6": {"name": "6 of Clubs"}
       "7": {"name": "7 of Clubs"}
@@ -29,8 +29,8 @@ card_data = {
       "j": {"name": "Jack of Clubs"}
       }
     }
-  diamonds: {
-    color: "red", cards: {
+  "diamonds": {
+    "color": "red", "cards": {
       "4": {"name": "4 of Diamonds"}
       "5": {"name": "5 of Diamonds"}
       "6": {"name": "6 of Diamonds"}
@@ -44,8 +44,8 @@ card_data = {
       "j": {"name": "Jack of Diamonds"}
       }
     }
-  hearts: {
-    color: "red", cards: {
+  "hearts": {
+    "color": "red", "cards": {
       "4": {"name": "4 of Hearts"}
       "5": {"name": "5 of Hearts"}
       "6": {"name": "6 of Hearts"}
