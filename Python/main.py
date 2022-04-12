@@ -31,33 +31,33 @@ card_data = {
     }
   diamonds: {
     color: "red", cards: {
-    "4": {"name": "4 of Diamonds"}
-    "5": {"name": "5 of Diamonds"}
-    "6": {"name": "6 of Diamonds"}
-    "7": {"name": "7 of Diamonds"}
-    "8": {"name": "8 of Diamonds"}
-    "9": {"name": "9 of Diamonds"}
-    "10": {"name": "10 of Diamonds"}
-    "q": {"name": "Queen of Diamonds"}
-    "k": {"name": "King of Diamonds"}
-    "a": {"name": "Ace of Diamonds"}
-    "j": {"name": "Jack of Diamonds"}
-    }
+      "4": {"name": "4 of Diamonds"}
+      "5": {"name": "5 of Diamonds"}
+      "6": {"name": "6 of Diamonds"}
+      "7": {"name": "7 of Diamonds"}
+      "8": {"name": "8 of Diamonds"}
+      "9": {"name": "9 of Diamonds"}
+      "10": {"name": "10 of Diamonds"}
+      "q": {"name": "Queen of Diamonds"}
+      "k": {"name": "King of Diamonds"}
+      "a": {"name": "Ace of Diamonds"}
+      "j": {"name": "Jack of Diamonds"}
+      }
     }
   hearts: {
     color: "red", cards: {
-    "4": {"name": "4 of Hearts"}
-    "5": {"name": "5 of Hearts"}
-    "6": {"name": "6 of Hearts"}
-    "7": {"name": "7 of Hearts"}
-    "8": {"name": "8 of Hearts"}
-    "9": {"name": "9 of Hearts"}
-    "10": {"name": "10 of Hearts"}
-    "q": {"name": "Queen of Hearts"}
-    "k": {"name": "King of Hearts"}
-    "a": {"name": "Ace of Hearts"}
-    "j": {"name": "Jack of Hearts"}
-    }
+      "4": {"name": "4 of Hearts"}
+      "5": {"name": "5 of Hearts"}
+      "6": {"name": "6 of Hearts"}
+      "7": {"name": "7 of Hearts"}
+      "8": {"name": "8 of Hearts"}
+      "9": {"name": "9 of Hearts"}
+      "10": {"name": "10 of Hearts"}
+      "q": {"name": "Queen of Hearts"}
+      "k": {"name": "King of Hearts"}
+      "a": {"name": "Ace of Hearts"}
+      "j": {"name": "Jack of Hearts"}
+      }
     }
 }
 
@@ -69,10 +69,33 @@ cards = [
   "joker"
 ]
 
+kitty = []
+
 player1_hand = []
 player2_hand = []
 player3_hand = []
 player4_hand = []
 
 def deal():
-  
+  for i in range(10):
+    card = random.choice(cards)
+    player1_hand.append(card)
+    cards.remove(card)
+    
+    card = random.choice(cards)
+    player2_hand.append(card)
+    cards.remove(card) 
+    
+    card = random.choice(cards)
+    player3_hand.append(card)
+    cards.remove(card) 
+    
+    card = random.choice(cards)
+    player4_hand.append(card)
+    cards.remove(card) 
+    
+    if i == 3 or i == 6 or i == 9:
+      card = random.choice(cards)
+      kitty.append(card)
+      cards.remove(card)
+    
