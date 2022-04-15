@@ -1,9 +1,5 @@
 import random
 
-num = ""
-suite = ""
-card_format = "\n________________\n| {}              |\n|                |\n|                |\n|       {}        |\n|                |\n|                |\n|              {} |\n|________________|\n".format(num, suite, num)
-
 print("Starting...")
 
 card_data = {
@@ -121,8 +117,6 @@ def deal():
     
     card = card_data[suite]["cards"][num]
     card_color = card_data[suite]["color"]
-    
-    #print("\nYour hand:\n\n" + card_form)
     
   return player1_hand
   #print(kitty)
