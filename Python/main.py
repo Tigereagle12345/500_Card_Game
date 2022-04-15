@@ -1,4 +1,5 @@
 import random
+from ai import *
 
 print("Starting...")
 
