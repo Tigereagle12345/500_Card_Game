@@ -1,5 +1,4 @@
 import random
-from ai import *
 
 print("Starting...")
 
@@ -77,6 +76,7 @@ player1_hand = []
 player2_hand = []
 player3_hand = []
 player4_hand = []
+player_hand = []
 def deal():
   print("Dealing...")
   for i in range(10):
@@ -117,12 +117,11 @@ def deal():
       suite = "hearts"
     
     card = card_data[suite]["cards"][num]
-    card_color = card_data[suite]["color"]
-    
-  return player1_hand
-  #print(kitty)
-  #print(player1_hand)
-  #print(player2_hand)
-  #print(player3_hand)
-  #print(player4_hand)
-hand = deal()
+   
+    player_hand.append(card)
+  for card in player_hand:
+    print(card)
+
+def ai():
+  #
+deal()
