@@ -1,4 +1,5 @@
 import random
+from card_format import card_format as card_form
 print("Starting...")
 
 card_data = {
@@ -115,8 +116,9 @@ def deal():
       suite = "hearts"
     
     card = card_data[suite]["cards"][num]
-    card_color = ard_data[suite]["color"]
+    card_color = card_data[suite]["color"]
     
+    print("\nYour hand:\n\n" + card_form)
     
   return hand
   #print(kitty)
