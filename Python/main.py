@@ -124,7 +124,7 @@ def deal():
     
     print("\nYour hand:\n\n" + card_form)
     
-  return hand
+  return player1_hand
   #print(kitty)
   #print(player1_hand)
   #print(player2_hand)
