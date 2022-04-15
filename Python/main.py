@@ -122,7 +122,7 @@ def deal():
     card = card_data[suite]["cards"][num]
     card_color = card_data[suite]["color"]
     
-    print("\nYour hand:\n\n" + card_form)
+    #print("\nYour hand:\n\n" + card_form)
     
   return player1_hand
   #print(kitty)
