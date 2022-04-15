@@ -1,5 +1,9 @@
 import random
-from card_format import card_format as card_form
+
+num = ""
+suite = ""
+card_format = "\n________________\n| {}              |\n|                |\n|                |\n|       {}        |\n|                |\n|                |\n|              {} |\n|________________|\n".format(num, suite, num)
+
 print("Starting...")
 
 card_data = {
