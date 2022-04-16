@@ -1,6 +1,6 @@
 import random
 
-print("Starting...")
+players = ["player1", "player2", "player3", "player4"]
 
 card_data = {
   "spades": {
@@ -77,51 +77,69 @@ player2_hand = []
 player3_hand = []
 player4_hand = []
 player_hand = []
-def deal():
-  print("Dealing...")
-  for i in range(10):
-    card = random.choice(cards)
-    player1_hand.append(card)
-    cards.remove(card)
+def deal(dealer):
+    if dealer == players[3]:
+        dealer = players[0]
+    else:
+        dealer = players[int(dealer[6]) + 1]
+    #print(dealer)
+    print(str(dealer) + " is dealing...\n")
+    for i in range(10):
+        card = random.choice(cards)
+        player1_hand.append(card)
+        cards.remove(card)
     
-    card = random.choice(cards)
-    player2_hand.append(card)
-    cards.remove(card) 
+        card = random.choice(cards)
+        player2_hand.append(card)
+        cards.remove(card) 
     
-    card = random.choice(cards)
-    player3_hand.append(card)
-    cards.remove(card) 
+        card = random.choice(cards)
+        player3_hand.append(card)
+        cards.remove(card) 
     
-    card = random.choice(cards)
-    player4_hand.append(card)
-    cards.remove(card) 
+        card = random.choice(cards)
+        player4_hand.append(card)
+        cards.remove(card) 
     
-    if i == 3 or i == 6 or i == 9:
-      card = random.choice(cards)
-      kitty.append(card)
-      cards.remove(card)
+        if i == 3 or i == 6 or i == 9:
+            card = random.choice(cards)
+            kitty.append(card)
+            cards.remove(card)
     
-  for i in player1_hand:
-    num = str(i[0])
-    suite = str(i[1])
-    if suite == "s":
-      suite = "spades"
+    for i in player1_hand:
+        if str(i[1]) == "0":
+            suite = str(i[2])
+            num = str("10")
+        else:
+            suite = str(i[1])
+            num = str(i[0])
+        #print(i)
+        #print(suite)
+        #print(num)
+        if suite == "s":
+            suite = "spades"
       
-    elif suite == "c":
-      suite = "clubs"
+        elif suite == "c":
+            suite = "clubs"
+        
+        elif suite == "d":
+            suite = "diamonds"
       
-    elif suite == "d":
-      suite = "diamonds"
-      
-    elif suite == "h":
-      suite = "hearts"
+        elif suite == "h":
+            suite = "hearts"
     
-    card = card_data[suite]["cards"][num]
-   
-    player_hand.append(card)
-  for card in player_hand:
-    print(card)
+        if i == "joker":
+            card = "Joker"
+            #print(card)
+        else:
+            card = card_data[str(suite)]["cards"][str(num)]["name"]
+        player_hand.append(card)
+    
+    print("Your hand: \n")
+    for card in player_hand:
+        print(card)
 
-def ai():
-  #
-deal()
+#def bet():
+
+dealer = "player4"
+deal(dealer)
