@@ -142,6 +142,36 @@ def deal(dealer):
     
     return dealer
 
+def bid_hand(bidder):
+  if bidder == "player2":
+    hand = player2_hand
+  elif bidder == "player3":
+    hand = player3_hand
+  elif bidder == "player4":
+    hand = player4_hand
+  return hand
+  
+def bid_ai(bidder):
+  hand = bid_hand(bidder)
+  for card in hand:
+    if str(i[1]) == "0":
+            suite = str(i[2])
+            num = str("10")
+        else:
+            suite = str(i[1])
+            num = str(i[0])
+        if suite == "s":
+            suite = "spades"
+        elif suite == "c":
+            suite = "clubs"
+        elif suite == "d":
+            suite = "diamonds"
+        elif suite == "h":
+            suite = "hearts
+        elif suite == "o":
+          suite = ""
+          
+  
 def ask_bid():
     bid = input("Please place a bid (format as number before suite, with 10 as t. Example 7 Hearts would be 7h. Misere and Open Misere should be written as m and om, respectivly ):\n")
     return bid
@@ -150,7 +180,7 @@ def bid(first_bid):
     bids = ["6s", "6c", "6d", "6h", "7s", "7c", "7d", "7h", "8s", "8c", "8d", "8h", "9s", "9c", "9d", "9h", "ts", "tc", "td", "th", "m", "om"]
     trumps = ""
         
-    if first_bid == "player2":
+    if first_bid == "player1":
         current_bid = ask_bid()
         if current_bid in bids:
             bid.append(current_bid)
@@ -158,7 +188,7 @@ def bid(first_bid):
             print("Invalid Bid, Please Try Again.")
             bid_dealer(first_bid)
     else:
-        
+      bid_ai(first_bid)
         
     return trumps
 
